@@ -25,8 +25,8 @@ const SERVICES = [
 
 const SubHeader = () => {
   return (
-    <div className='relative md:absolute md:top-1/5 left-0 md:left-1/2 w-full md:-translate-x-1/2 md:mt-40 z-10 flex flex-col md:items-start items-center px-5 md:px-0'>
-      <div className='w-full md:w-1/2 text-base md:text-2xl flex flex-col gap-3 md:gap-4 leading-relaxed md:leading-snug text-center md:text-left'>
+    <div className='relative z-20 w-full self-start rounded-3xl bg-bg/95 px-5 py-6 md:col-start-2 md:row-start-2 md:mt-8 md:w-full md:max-w-2xl md:justify-self-end md:px-8 md:py-8'>
+      <div className='w-full text-base md:text-2xl flex flex-col gap-3 md:gap-4 leading-relaxed md:leading-snug text-left'>
         <p>
           Rakesh K is a Computer Science and Engineering student at Alva's Institute of Engineering and Technology (CGPA: 7.6), based in Bangalore, Karnataka, India.
         </p>
@@ -35,7 +35,7 @@ const SubHeader = () => {
         </p>
       </div>
 
-      <div className='about-inline-services w-full md:w-1/2 mt-8 md:mt-12 h-auto md:h-[36vh]'>
+      <div className='about-inline-services w-full mt-8 md:mt-12 h-auto'>
         <div className='about-inline-services__head'>
           <span className='about-inline-services__label'>SERVICES</span>
         </div>

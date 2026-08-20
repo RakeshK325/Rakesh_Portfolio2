@@ -1701,3 +1701,38 @@ html {
     justify-content: space-between;
   }
 }
+
+
+/* ── FINAL SECTION ALIGNMENT OVERRIDES ── */
+#about {
+  isolation: isolate;
+}
+
+#projects-section,
+#profile-details,
+#contact-section {
+  scroll-margin-top: 7rem;
+}
+
+#projects-section {
+  padding-top: clamp(8rem, 10vw, 12rem);
+}
+
+.about-inline-services__grid {
+  height: auto;
+  grid-auto-rows: auto;
+}
+
+.about-inline-services__item {
+  min-height: 8rem;
+}
+
+@media (max-width: 767px) {
+  #projects-section {
+    padding-top: 6rem;
+  }
+
+  .about-inline-services__item {
+    min-height: 0;
+  }
+}

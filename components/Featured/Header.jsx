@@ -1,25 +1,18 @@
-import { a, useSpring } from "@react-spring/web";
+import React from "react";
 import { Trail } from "./TrailText";
-import React, { useEffect, useState } from "react";
 
 const Header = () => {
-  const [open, set] = useState();
-
-  useEffect(() => {
-    set(true);
-  }, []);
-
-  const [horizontal, api] = useSpring(() => ({ from: { transform: 'translateX(0%)' } }));
-
-  const horizontalCallback = open => api.start({ transform: `translateX(${open ? '20%' : '0%'})` });
   return (
-    <div className="w-full z-10 relative px-4 md:px-0 md:pl-6 font-semibold text-5xl sm:text-6xl md:text-[9rem] text-center md:text-left leading-[0.95] md:leading-none" style={{ letterSpacing: "-0.07em" }}>
-      <Trail callback={horizontalCallback}>
-        <a.div className="flex justify-center md:justify-start flex-wrap md:flex-nowrap" style={horizontal}>
+    <div
+      className="relative z-20 w-full px-4 font-semibold text-5xl leading-[0.95] sm:text-6xl md:px-0 md:pl-6 md:text-[9rem] md:leading-none"
+      style={{ letterSpacing: "-0.07em" }}
+    >
+      <Trail>
+        <div className="flex flex-wrap justify-center md:flex-nowrap md:justify-start">
           <div>Building&nbsp;</div>
           <div>Real&nbsp;</div>
-        </a.div>
-        <div className="flex justify-center md:justify-start flex-wrap md:flex-nowrap">
+        </div>
+        <div className="flex flex-wrap justify-center md:flex-nowrap md:justify-start">
           <div>Digital&nbsp;</div>
           <div>Systems&nbsp;</div>
         </div>

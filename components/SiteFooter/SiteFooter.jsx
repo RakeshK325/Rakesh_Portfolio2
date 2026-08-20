@@ -86,6 +86,7 @@ const SiteFooter = () => {
           <div className="f-col">
             <h3>EXPLORE</h3>
             <a href="#projects-section">Projects</a>
+            <a href="#profile-details">Profile</a>
             <a href="#contact-section">Get in touch</a>
           </div>
           <div className="f-col">

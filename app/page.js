@@ -16,6 +16,7 @@ import HorizontalScroll from "@/components/HorizontalScroll/HorizontalScroll";
 import Projects from "@/components/Projects/Projects";
 import Contact from "@/components/Contact/Contact";
 import SiteFooter from "@/components/SiteFooter/SiteFooter";
+import ProfileDetails from "@/components/ProfileDetails/ProfileDetails";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -92,6 +93,8 @@ export default function Home() {
         </div>
 
         <Projects />
+
+        <ProfileDetails />
 
         <HorizontalScroll />
         <Contact />

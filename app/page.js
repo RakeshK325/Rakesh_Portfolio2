@@ -1,14 +1,10 @@
 "use client";
 import { Suspense, useRef, useEffect } from "react";
-import Footer from "@/components/Character/Experience";
 import FeaturedVideo from "@/components/Featured/FeaturedVideo";
 import Header from "@/components/Featured/Header";
 import Skiggle from "@/components/Featured/Skiggle";
 import SubHeader from "@/components/Featured/SubHeader";
-import Description from "@/components/Navbar/Description";
 import Navbar from "@/components/Navbar/Navbar";
-import ScrollText from "@/components/Navbar/ScrollText";
-import FeaturedWork from "@/components/FeaturedWork/FeaturedWork";
 import HeroSection from "@/components/HeroSection/HeroSection";
 import SmoothScroll from "@/components/SmoothScroll";
 import GradualBlur from "@/components/GradualBlur/GradualBlur";
@@ -80,10 +76,9 @@ export default function Home() {
         <Navbar />
 
         <HeroSection />
-        {/* </div> */}
         <div
           id="about"
-          className="h-auto md:h-[140vh] relative mt-16 md:mt-[10rem] flex flex-col md:block pb-16 md:pb-0 gap-8 md:gap-0"
+          className="h-auto md:min-h-[140vh] relative mt-16 md:mt-[10rem] flex flex-col md:block pb-16 md:pb-0 gap-8 md:gap-0"
           ref={ref}
         >
           <Skiggle />
@@ -123,21 +118,6 @@ export default function Home() {
             zIndex={1}
           />
         </div>
-        {/* <FeaturedWork />
-        <Connection className="" />
-        <div className="mt-80 w-full h-screen relative">
-          <Experience className="w-full h-full rounded-3xl" />
-        </div> */}
-        {/* <div className="bg-brblue flex items-center justify-center w-full h-screen font-extrabold text-9xl"> this is the footer  </div> */}
-        {/* <div className="relative">
-          <div className="absolute text-9xl font-bold text-center w-full h-full top-80">
-            HIRE       ME
-          </div>
-          <Footer />
-          <div className="absolute text-3xl font-bold text-center w-full h-full top-[40rem]">
-            made by Rakesh K
-          </div>
-        </div> */}
       </div>
     </Suspense>
     </SmoothScroll>

@@ -13,8 +13,8 @@ const inter = Inter({
 })
 
 export const metadata = {
-  title: 'ELFEKKY',
-  description: 'Personal portfolio',
+  title: 'Rakesh K | Full-Stack & AI Systems Developer',
+  description: 'Rakesh K — Full-Stack & AI Systems Developer and Computer Science & Engineering student in Bangalore, building scalable web platforms, AI systems, and enterprise applications.',
   icons: {
     icon: '/icon.png',
   },

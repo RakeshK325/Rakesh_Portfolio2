@@ -28,7 +28,7 @@ export default function Home() {
 
     console.clear();
     console.log(
-      "%cCREATED BY MTARIF.COM",
+      "%cRAKESH K | FULL-STACK & AI SYSTEMS DEVELOPER",
       "background: #D9E6FF; color: #0f172a; font-size: 16px; font-weight: 800; padding: 10px 16px; border-radius: 10px; letter-spacing: 2px;"
     );
   }, []);
@@ -132,7 +132,7 @@ export default function Home() {
           </div>
           <Footer />
           <div className="absolute text-3xl font-bold text-center w-full h-full top-[40rem]">
-            made by mtarif
+            made by Rakesh K
           </div>
         </div> */}
       </div>

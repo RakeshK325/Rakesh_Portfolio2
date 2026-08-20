@@ -28,10 +28,10 @@ const SubHeader = () => {
     <div className='relative md:absolute md:top-1/5 left-0 md:left-1/2 w-full md:-translate-x-1/2 md:mt-40 z-10 flex flex-col md:items-start items-center px-5 md:px-0'>
       <div className='w-full md:w-1/2 text-base md:text-2xl flex flex-col gap-3 md:gap-4 leading-relaxed md:leading-snug text-center md:text-left'>
         <p>
-          Abdelrahman Elfekky is an AI Engineer and Data Analyst building real-world digital systems across web, mobile, and AI.
+          Rakesh K is a Computer Science and Engineering student at Alva's Institute of Engineering and Technology (CGPA: 7.6), based in Bangalore, Karnataka, India.
         </p>
         <p>
-          He integrates AI Automation into every product, engineering complete ecosystems instead of standalone tools.
+          Specialized in full-stack web architectures (React, Next.js, Node.js, Flask), database design, REST APIs, AI systems, and cloud integration.
         </p>
       </div>
 

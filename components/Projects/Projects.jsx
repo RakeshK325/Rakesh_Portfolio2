@@ -7,32 +7,32 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 const PROJECTS = [
   {
     name: "Population Analysis",
-    href: "https://github.com/AbdelruhmanAshraf/Population-Analysis",
+    href: "https://github.com/rakesh160982",
     kind: "GitHub",
   },
   {
     name: "Titanic EDA",
-    href: "https://github.com/AbdelruhmanAshraf/Titanic-EDA",
+    href: "https://github.com/rakesh160982",
     kind: "GitHub",
   },
   {
     name: "Bank Decision Tree",
-    href: "https://github.com/AbdelruhmanAshraf/bank_decision_tree",
+    href: "https://github.com/rakesh160982",
     kind: "GitHub",
   },
   {
     name: "Screen Time Analysis",
-    href: "https://github.com/AbdelruhmanAshraf/screen-time-analysis",
+    href: "https://github.com/rakesh160982",
     kind: "GitHub",
   },
   {
     name: "Weather Forecasting Using Python",
-    href: "https://github.com/AbdelruhmanAshraf/weather-forecasting-using-python",
+    href: "https://github.com/rakesh160982",
     kind: "GitHub",
   },
   {
     name: "Flower Recognition",
-    href: "https://github.com/AbdelruhmanAshraf/Flower-Recognition",
+    href: "https://github.com/rakesh160982",
     kind: "GitHub",
   },
   {

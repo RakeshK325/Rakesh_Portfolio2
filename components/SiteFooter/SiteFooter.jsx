@@ -59,38 +59,13 @@ const SiteFooter = () => {
     <footer id="main-footer">
       <div className="footer-top">
         <div className="footer-brand">
-          <h1 className="f-logo">ELFEKKY</h1>
+          <h1 className="f-logo">RAKESH K</h1>
           <p className="f-desc">
-            Elfekky builds more than digital products. <br />
-            He builds systems that think.
+            Rakesh K builds scalable web platforms, AI systems, and enterprise applications.
           </p>
           <div className="f-socials">
             <a
-              href="https://www.instagram.com/elfekkyy/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Instagram"
-            >
-              <InstagramIcon />
-            </a>
-            <a
-              href="https://www.tiktok.com/@elfekkyy"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="TikTok"
-            >
-              <TikTokIcon />
-            </a>
-            <a
-              href="https://www.youtube.com/@Elfekki"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="YouTube"
-            >
-              <YoutubeIcon />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/abdelruhamanelfekky/"
+              href="https://linkedin.com/in/rakesh-k325"
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
@@ -98,7 +73,7 @@ const SiteFooter = () => {
               <LinkedinIcon />
             </a>
             <a
-              href="https://github.com/AbdelruhmanAshraf"
+              href="https://github.com/rakesh160982"
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub"
@@ -116,23 +91,16 @@ const SiteFooter = () => {
           </div>
           <div className="f-col">
             <h3>CONTACT</h3>
-            <a href="mailto:abdelruhamanelfekky@gmail.com">
-              abdelruhamanelfekky@gmail.com
+            <a href="mailto:rakesh160982@gmail.com">
+              rakesh160982@gmail.com
             </a>
-            <a
-              href="https://wa.me/201080620024"
-              target="_blank"
-              rel="noreferrer"
-            >
-              WhatsApp: 010 8062 0024
-            </a>
-            <a href="tel:+201080620024">Phone: 010 8062 0024</a>
+            <span>Bangalore, Karnataka, India</span>
           </div>
         </div>
       </div>
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} Elfekky. All rights reserved.</p>
-        <p>created by mtarif.com</p>
+        <p>© {new Date().getFullYear()} Rakesh K. All rights reserved.</p>
+        <p>Built by Rakesh K</p>
       </div>
     </footer>
   );

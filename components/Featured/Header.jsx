@@ -24,6 +24,9 @@ const Header = () => {
           <div>Systems&nbsp;</div>
         </div>
       </Trail>
+      <p className="mt-6 px-4 text-center text-base font-normal leading-relaxed tracking-normal md:max-w-3xl md:px-0 md:text-left md:text-2xl">
+        Building Scalable Web Platforms, AI Systems, and Enterprise Applications.
+      </p>
     </div>
   );
 };

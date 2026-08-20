@@ -9,9 +9,8 @@ import MenuButton from "./MenuButton";
 import Link from "next/link";
 import MusicButton from "./MusicButton";
 
-// Shared contact targets — same as Menu/Contact/SiteFooter.
-const EMAIL = "abdelruhamanelfekky@gmail.com";
-const WHATSAPP_URL = "https://wa.me/201080620024";
+// Shared contact target used across the navigation and contact surfaces.
+const EMAIL = "rakesh160982@gmail.com";
 
 // Smooth-scroll to an in-page section. Uses the global Lenis instance
 // exposed by SmoothScroll (window.__lenis) so mobile nav clicks feel
@@ -90,7 +89,7 @@ function Navbar() {
             className="tracking-wider font-semibold text-2xl cursor-pointer text-fg"
             style={{ letterSpacing: "-0.03em" }}
           >
-            ELFEKKY
+            RAKESH K
           </Link>
           <button
             type="button"
@@ -158,16 +157,6 @@ function Navbar() {
               className="flex items-center justify-between bg-fg text-bg rounded-full px-5 py-4 text-sm tracking-[0.2em] font-semibold"
             >
               <span>EMAIL</span>
-              <span aria-hidden="true">↗</span>
-            </a>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noreferrer"
-              onClick={() => setMobileOpen(false)}
-              className="flex items-center justify-between border-2 border-fg text-fg rounded-full px-5 py-4 text-sm tracking-[0.2em] font-semibold"
-            >
-              <span>WHATSAPP</span>
               <span aria-hidden="true">↗</span>
             </a>
           </div>

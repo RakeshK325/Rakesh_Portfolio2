@@ -4,10 +4,9 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// Real contact info — kept in sync with what's already in `SiteFooter`.
-// If any of these change, update them in both places.
-const EMAIL = "abdelruhamanelfekky@gmail.com";
-const WHATSAPP_URL = "https://wa.me/201080620024";
+// Primary contact information used by the contact CTAs.
+const EMAIL = "rakesh160982@gmail.com";
+const LINKEDIN_URL = "https://linkedin.com/in/rakesh-k325";
 
 const ArrowUpRight = () => (
   <svg
@@ -119,11 +118,11 @@ const Contact = () => {
         </a>
         <a
           id="ct-btn-secondary"
-          href={WHATSAPP_URL}
+          href={LINKEDIN_URL}
           target="_blank"
           rel="noreferrer"
         >
-          <span>WHATSAPP</span>
+          <span>LINKEDIN</span>
           <ArrowUpRight />
         </a>
       </div>

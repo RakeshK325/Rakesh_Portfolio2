@@ -240,7 +240,7 @@ const HeroSection = () => {
         {/* Heading text (deepest, moves least) */}
         <div className="hero-layer" data-depth="0.10" style={{ zIndex: 5 }}>
           <div id="hero-heading" ref={headingRef}>
-            <SplitChars text="ELFEKKY" />
+            <SplitChars text="RAKESH K" />
           </div>
         </div>
 

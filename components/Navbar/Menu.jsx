@@ -3,8 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 // Real contact info — kept in sync with `Contact`, `SiteFooter`, and
 // `LetsTalk`. Update all four if these ever change.
-const EMAIL = "abdelruhamanelfekky@gmail.com";
-const WHATSAPP_URL = "https://wa.me/201080620024";
+const EMAIL = "rakesh160982@gmail.com";
 
 // Smoothly scrolls to a section by id. Uses the active Lenis instance
 // (exposed by SmoothScroll on `window.__lenis`) when available, so the
@@ -141,16 +140,6 @@ const Menu = ({ open, onOutsideClick, onClose }) => {
                 className="flex items-center justify-between bg-fg text-bg rounded-xl px-4 py-3 text-sm tracking-widest font-semibold transition-transform duration-200 hover:-translate-y-0.5"
               >
                 <span>EMAIL</span>
-                <span aria-hidden="true">↗</span>
-              </a>
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noreferrer"
-                onClick={() => onClose && onClose()}
-                className="flex items-center justify-between border-2 border-fg text-fg rounded-xl px-4 py-3 text-sm tracking-widest font-semibold transition-colors duration-200 hover:bg-accent-soft"
-              >
-                <span>WHATSAPP</span>
                 <span aria-hidden="true">↗</span>
               </a>
             </div>

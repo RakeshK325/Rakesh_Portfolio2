@@ -3,13 +3,17 @@ import { motion, useScroll, useTransform } from "framer-motion";
 const PATH_D =
   "M1588 1052.5C1563.5 1002.5 1503.4 1295.7 1413 1288.5C1300 1279.5 1318.5 976.5 1145.5 942.5C972.5 908.501 1011.5 1109.5 827 1142.5C642.5 1175.5 640.5 963.5 366 804C146.4 676.4 73.1667 792.5 64 866.5C65.5 916.5 106.8 1011.8 260 993C396 976.311 647.5 927.5 677.5 547.5C707.5 167.5 246.5 -47 82.5 66C-81.5 179 -189.5 31.5 -189.5 31.5";
 
-const Skiggle = () => {
-  const { scrollYProgress } = useScroll({ layoutEffect: false });
+const Skiggle = ({ targetRef }) => {
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start 92%", "end 8%"],
+    layoutEffect: false,
+  });
 
-  // Match the reference portfolio: draw the thick ribbon during the first
-  // portion of the document scroll. Using normalized pathLength keeps the
-  // animation independent of the expanded about-section height.
-  const dashOffset = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
+  // Progress is measured against the actual about section, not the full page.
+  // This keeps the thick stroke drawing smoothly through the expanded portrait,
+  // biography, and services layout regardless of the section's final height.
+  const dashOffset = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
   return (
     <svg
@@ -22,12 +26,12 @@ const Skiggle = () => {
     >
       <motion.path
         d={PATH_D}
-        pathLength="1"
+        pathLength={1}
         stroke="url(#rakesh-scroll-line-gradient)"
         strokeDasharray="1"
         strokeLinecap="round"
-        strokeWidth="50"
-        style={{ strokeDashoffset: dashOffset }}
+        strokeWidth={50}
+        style={{ strokeDashoffset: dashOffset, willChange: "stroke-dashoffset" }}
       />
       <defs>
         <linearGradient

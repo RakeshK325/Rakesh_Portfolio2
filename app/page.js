@@ -81,7 +81,7 @@ export default function Home() {
           className="relative mt-16 flex h-auto flex-col gap-8 pb-16 md:mt-[10rem] md:min-h-[140vh] md:grid md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:grid-rows-[auto_1fr] md:gap-x-8 md:gap-y-12 md:pb-20"
           ref={ref}
         >
-          <Skiggle />
+          <Skiggle targetRef={ref} />
           <div className="relative z-20 md:col-span-2 md:row-start-1">
             <Header />
           </div>

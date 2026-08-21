@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { ReactLenis } from "lenis/react";
+import { motion, useScroll, useTransform } from "motion/react";
 
 const PROJECTS = [
   {
@@ -9,6 +10,11 @@ const PROJECTS = [
     shortLabel: "Enterprise security",
     category: "Full-Stack / Enterprise Security",
     techStack: ["MongoDB", "Express.js", "React", "Node.js", "JWT", "Puppeteer", "Multer"],
+    highlights: [
+      "Role-Based Access Control (RBAC) securing multi-tier REST APIs.",
+      "Automated single-click PDF report export powered by Puppeteer.",
+      "Multer integration handling multipart/form-data document attachments.",
+    ],
     description:
       "Developed a full-stack MERN application automating faculty self-appraisal workflows across 4 roles (Admin, Faculty, HOD, Principal). Implemented RBAC, JWT authentication, bcrypt hashing, Multer file uploads, and Puppeteer-based automated PDF report generation.",
     href: "https://github.com/rakesh160982",
@@ -19,6 +25,11 @@ const PROJECTS = [
     shortLabel: "AI platform",
     category: "Full-Stack AI Platform",
     techStack: ["Next.js 15", "TypeScript", "Firebase Firestore", "Gemini 2.5 Flash", "Google Genkit", "Zod"],
+    highlights: [
+      "Atomic Firestore batch writes preventing race conditions during record updates.",
+      "Dual UIP/IAP schedule evaluation configured per child profile.",
+      "AI Smart Availability assistant using Gemini 2.5 Flash and Zod outputs.",
+    ],
     description:
       "Built a pediatric vaccination platform supporting dual-schedule (UIP/IAP) tracking with atomic Firestore batch writes. Integrated Google Genkit and Gemini 2.5 Flash to power a Zod-validated AI Smart Availability assistant.",
     href: "https://github.com/rakesh160982",
@@ -29,6 +40,11 @@ const PROJECTS = [
     shortLabel: "Biotech AI",
     category: "Biotech AI / Full Stack",
     techStack: ["React", "Flask", "Machine Learning", "Python", "REST APIs"],
+    highlights: [
+      "gRNA scoring algorithm calculating on-target versus off-target risk profiles.",
+      "Asynchronous Flask REST backend integrated with custom ML models.",
+      "Interactive genome-target visualization rendered dynamically in React.",
+    ],
     description:
       "AI-powered platform automating CRISPR target analysis featuring a gRNA ranking engine that evaluates on-target efficiency and off-target risk metrics with a real-time visualization dashboard.",
     href: "https://github.com/rakesh160982",
@@ -75,6 +91,12 @@ const StackCard = ({ project, index, progress, onOpen }) => {
             <p className="project-stack-card__eyebrow">{project.shortLabel}</p>
             <h3>{project.name}</h3>
             <p className="project-stack-card__description">{project.description}</p>
+            <div className="project-stack-card__highlights">
+              <span>Key features</span>
+              <ul>
+                {project.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}
+              </ul>
+            </div>
             <div className="project-stack-card__actions">
               <button type="button" className="project-stack-card__details" onClick={() => onOpen(project)}>
                 Details <span aria-hidden="true">↗</span>
@@ -129,7 +151,8 @@ const Projects = () => {
   }, [selectedProject]);
 
   return (
-    <section id="projects-section" ref={sectionRef} className="project-stack-section">
+    <ReactLenis root="asChild" options={{ autoRaf: false }}>
+      <section id="projects-section" ref={sectionRef} className="project-stack-section">
       <div className="project-stack-intro">
         <div>
           <span className="pj-label">PROJECTS</span>
@@ -162,6 +185,12 @@ const Projects = () => {
             <span className="pj-modal__eyebrow">{selectedProject.category}</span>
             <h3 id="project-modal-title">{selectedProject.name}</h3>
             <p className="pj-modal__description">{selectedProject.description}</p>
+            <div className="project-modal__highlights">
+              <span>Key features</span>
+              <ul>
+                {selectedProject.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}
+              </ul>
+            </div>
             <div className="pj-modal__stack" aria-label="Technology stack">
               {selectedProject.techStack.map((technology) => <span className="pj-modal__tag" key={technology}>{technology}</span>)}
             </div>
@@ -172,7 +201,8 @@ const Projects = () => {
           </div>
         </div>
       )}
-    </section>
+      </section>
+    </ReactLenis>
   );
 };
 

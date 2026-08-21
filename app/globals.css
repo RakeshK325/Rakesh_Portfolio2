@@ -2104,3 +2104,37 @@ html {
     text-transform: uppercase;
   }
 }
+
+.project-stack-card__highlights {
+  margin-top: 1.35rem;
+}
+
+.project-stack-card__highlights > span,
+.project-modal__highlights > span {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.65;
+}
+
+.project-stack-card__highlights ul,
+.project-modal__highlights ul {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.project-stack-card__highlights li::marker,
+.project-modal__highlights li::marker {
+  font-size: 0.65em;
+}
+
+.project-modal__highlights {
+  margin: 1.25rem 0;
+}

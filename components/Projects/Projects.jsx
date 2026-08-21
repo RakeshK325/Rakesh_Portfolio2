@@ -51,13 +51,19 @@ const StackCard = ({ project, index, progress, onOpen }) => {
   });
   const imageScale = useTransform(cardProgress, [0, 1], [1.12, 1]);
   const targetScale = 1 - (PROJECTS.length - index) * 0.055;
-  const scale = useTransform(progress, [index * 0.27, 1], [1, targetScale]);
+  const scale = useTransform(progress, [index * 0.25, 1], [1, targetScale]);
 
   return (
     <div ref={cardRef} className="project-stack-card-wrap">
       <motion.article
         className="project-stack-card"
-        style={{ scale, backgroundColor: project.accent, top: `calc(5vh + ${index * 22}px)` }}
+        style={{
+          scale,
+          backgroundColor: project.accent,
+          top: `calc(-5vh + ${index * 25}px)`,
+          zIndex: index + 1,
+          willChange: "transform",
+        }}
       >
         <div className="project-stack-card__header">
           <span className="project-stack-card__index">0{index + 1}</span>

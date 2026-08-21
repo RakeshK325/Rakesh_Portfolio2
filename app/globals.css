@@ -1839,7 +1839,7 @@ html {
 
 .project-stack-card-wrap {
   position: sticky;
-  top: 0;
+  top: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2059,6 +2059,7 @@ html {
   }
 
   .project-stack-card-wrap {
+    top: 0;
     height: auto;
     min-height: 0;
     padding: 1.25rem 0 0;

@@ -103,7 +103,12 @@ const ProfileDetails = () => {
             </div>
             <div className="grid gap-px overflow-hidden border border-theme-border bg-theme-border sm:grid-cols-2">
               {SKILL_GROUPS.map((group) => (
-                <article key={group.title} className="bg-bg p-5 md:p-7">
+                <article
+                  key={group.title}
+                  className={`bg-bg p-5 md:p-7 ${
+                    group.title === "CS Fundamentals" ? "sm:col-span-2" : ""
+                  }`}
+                >
                   <h4 className="text-lg font-medium tracking-[-0.03em] md:text-xl">
                     {group.title}
                   </h4>

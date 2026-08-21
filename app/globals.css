@@ -1799,3 +1799,307 @@ html {
     animation-play-state: paused;
   }
 }
+
+/* Stack-card Projects section */
+.project-stack-section {
+  position: relative;
+  z-index: 2;
+  overflow: clip;
+  padding: clamp(5rem, 9vw, 10rem) 5vw 6rem;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.project-stack-intro {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 3rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-bottom: clamp(1.5rem, 2vw, 2.5rem);
+  border-bottom: 1.5px solid var(--color-border);
+}
+
+.project-stack-intro > p {
+  max-width: 32rem;
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  line-height: 1.5;
+  text-align: right;
+}
+
+.project-stack-list {
+  position: relative;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.project-stack-card-wrap {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 92vh;
+  min-height: 38rem;
+}
+
+.project-stack-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: min(1100px, 90vw);
+  min-height: min(680px, 76vh);
+  padding: clamp(1.25rem, 3vw, 3rem);
+  overflow: hidden;
+  color: #0a0a0c;
+  border-radius: 2rem;
+  transform-origin: top center;
+  box-shadow: 0 28px 80px rgba(10, 10, 12, 0.2);
+}
+
+.project-stack-card__header,
+.project-stack-card__body,
+.project-stack-card__tags {
+  position: relative;
+  z-index: 1;
+}
+
+.project-stack-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(10, 10, 12, 0.2);
+}
+
+.project-stack-card__index,
+.project-stack-card__category,
+.project-stack-card__eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.project-stack-card__category {
+  text-align: right;
+}
+
+.project-stack-card__body {
+  display: grid;
+  flex: 1;
+  grid-template-columns: minmax(0, 0.9fr) minmax(16rem, 1.1fr);
+  gap: clamp(1.5rem, 5vw, 5rem);
+  align-items: center;
+  padding: clamp(2rem, 5vw, 5rem) 0;
+}
+
+.project-stack-card__copy h3 {
+  max-width: 16ch;
+  margin: 0.75rem 0 1.5rem;
+  font-size: clamp(2.2rem, 5vw, 5.6rem);
+  font-weight: 600;
+  letter-spacing: -0.065em;
+  line-height: 0.95;
+}
+
+.project-stack-card__description {
+  max-width: 46ch;
+  margin: 0;
+  font-size: clamp(0.95rem, 1.25vw, 1.15rem);
+  line-height: 1.55;
+}
+
+.project-stack-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.project-stack-card__github,
+.project-stack-card__details {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.project-stack-card__github span,
+.project-stack-card__details span {
+  display: block;
+  width: 1.1rem;
+  height: 1.1rem;
+  transition: transform 0.25s ease;
+}
+
+.project-stack-card__github:hover span,
+.project-stack-card__details:hover span {
+  transform: translate(0.2rem, -0.2rem);
+}
+
+.project-stack-card__details {
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(10, 10, 12, 0.25);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  cursor: pointer;
+}
+
+.project-stack-card__visual {
+  position: relative;
+  min-height: 19rem;
+  overflow: hidden;
+  border: 1px solid rgba(10, 10, 12, 0.2);
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.project-stack-card__visual::before,
+.project-stack-card__visual::after {
+  position: absolute;
+  content: "";
+  pointer-events: none;
+}
+
+.project-stack-card__visual::before {
+  inset: 12%;
+  border: 1px solid rgba(10, 10, 12, 0.28);
+  border-radius: 50%;
+  transform: rotate(-18deg) scaleX(1.35);
+}
+
+.project-stack-card__visual::after {
+  right: 10%;
+  bottom: 16%;
+  left: 10%;
+  height: 1px;
+  background: rgba(10, 10, 12, 0.4);
+  box-shadow: 0 -4rem 0 rgba(10, 10, 12, 0.15), 0 4rem 0 rgba(10, 10, 12, 0.15);
+}
+
+.project-stack-card__visual-inner {
+  position: absolute;
+  inset: 0;
+  padding: 1.25rem;
+}
+
+.project-stack-card__visual-number {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  font-size: clamp(4rem, 9vw, 9rem);
+  font-weight: 700;
+  letter-spacing: -0.1em;
+  line-height: 0.8;
+  opacity: 0.16;
+}
+
+.project-stack-card__visual-mark {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+}
+
+.project-stack-card__visual-lines {
+  position: absolute;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  align-items: flex-end;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.project-stack-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(10, 10, 12, 0.2);
+}
+
+.project-stack-card__tags span {
+  padding: 0.45rem 0.7rem;
+  border: 1px solid rgba(10, 10, 12, 0.22);
+  border-radius: 999px;
+  font-size: 0.68rem;
+  line-height: 1;
+}
+
+.project-stack-mobile-details {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .project-stack-intro {
+    display: block;
+  }
+
+  .project-stack-intro > p {
+    margin-top: 1.25rem;
+    text-align: left;
+  }
+
+  .project-stack-card-wrap {
+    height: auto;
+    min-height: 0;
+    padding: 1.25rem 0 0;
+  }
+
+  .project-stack-card {
+    position: relative;
+    top: 0 !important;
+    width: 100%;
+    min-height: 0;
+    border-radius: 1.5rem;
+  }
+
+  .project-stack-card__body {
+    display: block;
+    padding: 2.5rem 0;
+  }
+
+  .project-stack-card__visual {
+    min-height: 12rem;
+    margin-top: 2rem;
+  }
+
+  .project-stack-card__copy h3 {
+    max-width: none;
+    font-size: clamp(2.25rem, 11vw, 4rem);
+  }
+
+  .project-stack-mobile-details {
+    display: block;
+    padding: 0 0 2rem;
+  }
+
+  .project-stack-mobile-details button {
+    padding: 0;
+    color: var(--color-text-muted);
+    background: transparent;
+    border: 0;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+}

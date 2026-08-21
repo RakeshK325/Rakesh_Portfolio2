@@ -7,7 +7,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import HeroSection from "@/components/HeroSection/HeroSection";
 import SmoothScroll from "@/components/SmoothScroll";
 import GradualBlur from "@/components/GradualBlur/GradualBlur";
-import HorizontalScroll from "@/components/HorizontalScroll/HorizontalScroll";
+import { MarqueeDemo } from "@/components/MarqueeDemo/MarqueeDemo";
 import Projects from "@/components/Projects/Projects";
 import Contact from "@/components/Contact/Contact";
 import SiteFooter from "@/components/SiteFooter/SiteFooter";
@@ -91,7 +91,7 @@ export default function Home() {
 
         <ProfileDetails />
 
-        <HorizontalScroll />
+        <MarqueeDemo />
         <Contact />
         <SiteFooter />
 

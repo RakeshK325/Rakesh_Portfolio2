@@ -1736,3 +1736,28 @@ html {
     min-height: 0;
   }
 }
+
+/* Tech Skills Marquee */
+.tech-marquee-track {
+  animation: tech-marquee var(--duration, 30s) linear infinite;
+  will-change: transform;
+}
+
+.tech-marquee[data-pause-on-hover="true"]:hover .tech-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes tech-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tech-marquee-track {
+    animation-play-state: paused;
+  }
+}

@@ -1,14 +1,14 @@
 import React, { useRef, useState } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import Image from "next/image";
-import featuredImage from "../../d7e3f658-ad2c-4625-a3eb-165e8d54403c.jpg";
+import featuredImage from "../../Rakesh_photo.png";
 
 const FeaturedVideo = ({refForward, ...props }) => {
   const ref = useRef(null);
 
   const variants = {
     initial: { scale: 1, x: 0, y: 0 },
-    animate: { scale: 1.08, x: 0, y: 0 },
+    animate: { scale: 1.02, x: 0, y: 0 },
   };
 
   const { scrollYProgress } = useScroll({
@@ -27,7 +27,7 @@ const FeaturedVideo = ({refForward, ...props }) => {
       variants={variants}
       initial="initial"
       animate={progress > 0.5 ? "animate" : "initial"}
-      className="relative z-30 mx-auto mt-4 w-[82vw] max-w-[22rem] self-start overflow-hidden rounded-3xl aspect-[3/4] md:col-start-1 md:row-start-2 md:mt-0 md:ml-6 md:w-full md:max-w-[856px] md:aspect-[856/1024]"
+      className="relative z-30 mx-auto mt-4 w-[72vw] max-w-[18rem] self-start overflow-hidden rounded-3xl aspect-[3/4] md:col-start-1 md:row-start-2 md:mt-0 md:ml-4 md:w-[84%] md:max-w-[620px] md:aspect-[3/4]"
       {...props}
     >
       <Image

@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import Image from "next/image";
 import featuredImage from "../../Rakesh_photo.png";
+import { BorderBeam } from "../ui/BorderBeam";
 
 const FeaturedVideo = ({refForward, ...props }) => {
   const ref = useRef(null);
@@ -38,7 +39,13 @@ const FeaturedVideo = ({refForward, ...props }) => {
         sizes="(max-width: 768px) 80vw, 40vw"
         className="object-cover"
       />
-    </motion.div>
+      <BorderBeam
+        duration={4}
+        size={300}
+        reverse
+        className="from-transparent via-green-500 to-transparent"
+      />
+      </motion.div>
   );
 };
 
